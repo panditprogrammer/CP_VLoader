@@ -6,6 +6,7 @@ def download():
 	try:
 		with youtube_dl.YoutubeDL(ydl_opts) as ydl:
 			ydl.download([link_video])
+			print("\n  Successfully Downloaded \n ")
 	except:
 		print("Unable to download may be link is not valid or something else\n")
 
@@ -18,7 +19,6 @@ while(cp):
 	print("\t Paste Your Desire YouTube Video Link and wait until download\n  ")
 	link_video = input(" Enter Link Of The Video  \n ")
 	download()
-	print("\n  Successfully Downloaded \n ")
 	print("  Do you want to download another one? \n  Enter any Key to Continue \n  Else Press Enter key to Exit")
 	cp =input ("  ")
 	
